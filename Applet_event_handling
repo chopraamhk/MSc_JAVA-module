@@ -1,0 +1,52 @@
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+
+public class assign extends Applet implements ActionListener
+{
+   //Frame f;
+   Label cap,l;
+   TextField t;
+   TextArea ta; 
+   Button b;
+   public void init()
+    {
+   
+      cap=new Label("Conversion of DNA to RNA",Label.CENTER);
+      l=new Label("enter the nucleotide sequence");
+      t=new TextField(20);  
+      ta=new TextArea(10,50);
+      b=new Button("RNA SEQUENCE");
+      
+     }
+
+
+   public void start()
+     {
+       add(cap);
+       add(l);
+       add(t);
+       add(ta);
+       add(b);
+       b.addActionListener(this);
+      }
+    
+   public void actionPerformed(ActionEvent e)
+    {
+      String p= t.getText();
+      char[] dna=p.toCharArray();
+   
+      for(int i=0;i<dna.length;i++)
+       {
+         if(dna[i] == 'T')
+         { 
+             dna[i] ='U';
+         }
+        }
+        ta.setText("the RNA sequence is"+String.valueOf(dna));
+       }
+}
+/*
+<applet code="assign.class" width=300 height=500>
+</applet>
+ */      
