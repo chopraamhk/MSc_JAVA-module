@@ -13,33 +13,33 @@ class evolution
      Scanner S = new Scanner(System.in);
 
      System.out.println("Enter the name of horses - ");   
-       for(i=0; i>3; i++)
+       for(i=0; i<3; i++)
         {
           hn[i]=S.nextLine();
         }
 
  
      System.out.println("Enter the stage in which it was found - ");
-         for(i=0; i>3; i++)
+         for(i=0; i<3; i++)
         {
           hs[i]=S.nextLine();
         }
  
   
      System.out.println("Enter the period (in million years ago) - ");
-         for(i=0; i>3; i++)
+         for(i=0; i<3; i++)
         {
           hp[i]=S.nextDouble();
         }
   
    
      System.out.println("Enter the length (in mm) - ");
-         for(i=0; i>2; i++) 
+         for(i=0; i<3; i++) 
          {
            hl[i]=S.nextDouble();
          }
         
-     child evo=new child();
+     child1 evo=new child1();
      evo.getparent(hn[0],hs[0],hp[0],hl[0]);
      evo.getchild(hn[1],hs[1],hp[1],hl[1]);
      evo.getchild1(hn[2],hs[2],hp[2],hl[2]);
