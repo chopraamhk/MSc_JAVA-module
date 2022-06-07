@@ -1,0 +1,33 @@
+//the program is to represent a 2-D-Array
+import java.util.*;
+class twodarray
+{
+public static void main(String args[])
+{
+int i,j;
+Scanner S=new Scanner(System.in);
+System.out.println("enter row size");
+int row=S.nextInt();
+System.out.println("enter column size");
+int column=S.nextInt();
+int[][]mat=new int[row][column];
+System.out.println("enter matrix values");
+for(i=0;i<row;i++)
+{
+for (j=0;j<column;j++)
+mat[i][j]=S.nextInt();
+}
+System.out.println("the matrix is");
+for(i=0;i<row;i++)
+{for (j=0;j<column;j++)
+{System.out.print(mat[i][j]+"\t");}
+System.out.println();
+}
+System.out.println("the transpose of the matrix is");
+for(i=0;i<column;i++)
+{for (j=0;j<row;j++)
+{System.out.print(mat[j][i]+"\t");}
+System.out.println();
+}
+}
+}
