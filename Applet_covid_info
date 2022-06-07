@@ -1,0 +1,93 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+import java.io.*;
+
+public class corona extends Applet implements ActionListener
+{
+   Label l,l1,l2,l3,l4;
+   Button b,b1,b2,b3;
+   TextField tf;
+   TextArea ta,ta1,ta2; 
+
+  public void init()
+   {
+    l=new Label("CORONA INFORMATION",Label.CENTER);
+    l1=new Label("1. Do you want to know the NCBI ID of CORONA");
+    b=new Button("1. NCBI ID");
+   // tf=new TextField();
+    l2=new Label("2.  What are the present proteins");
+    b1=new Button("2. proteins");
+    //ta=new TextArea();
+    l3=new Label("3. The nucleotide sequence");
+    b2=new Button("3. SEQ");
+    //ta1=new TextArea();
+    l4=new Label("4. Convert DNA to RNA");
+    b3=new Button("4. convert");
+    ta2=new TextArea();
+     setBackground(Color.pink);   
+}
+
+      public void start()
+   {
+     add(l);
+     add(l1);
+     add(l2);
+     add(l3);
+     add(l4);
+    // add(tf);
+    // add(ta1);
+     add(ta2);
+     //add(ta3);
+     add(b);
+     add(b1);
+     add(b2);
+     add(b3);
+     b.addActionListener(this);
+     b1.addActionListener(this);
+     b2.addActionListener(this);
+     b3.addActionListener(this);
+     }
+ 
+   public void actionPerformed(ActionEvent e)
+   {
+     if(e.getSource() == b)
+     {
+      ta2.setText("ACCESSION NO. NC_0445512.2 \nSevere acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome \n 29903 bp ss-RNA");
+     }
+     else if(e.getSource() == b1)
+     {
+      ta2.setText("PROTEINS \n 1. ORF1ab PolyProtein  \n 2. ORF1a PolyProtein \n 3. ORF3a protein \n 4. ORF4 Envelope Protein \n 5. Surface Glycoprotein \n 6. Membrane Glycoprotein \n 7. ORF6 Protein \n 8. ORF7a Protein \n 9. ORF7b Protein \n 10. ORF8 Protein \n 11. Nucleocapsid Phosphoprotein ");
+      }
+     else if(e.getSource()==b2)
+     {
+       ta2.setText("ATGCGTGCGTACG");
+      }
+     else if(e.getSource()==b3)
+      {
+      //String p= ta2.getText();
+        String p="ATGCGTGCGTACG";
+      char[] dna=p.toCharArray();
+   
+      for(int i=0;i<=dna.length;i++)
+       {
+         if(dna[i] == 'T')
+         { 
+             dna[i] ='U';
+         }
+        }
+        ta2.setText("the RNA sequence is" +String.valueOf(dna));
+       }
+
+ /*  public void paint(Graphics g)
+   {
+    g.drawString("STAY HOME, STAY SAFE",50,70);
+    }
+*/
+
+}  
+} 
+/*
+<applet code="corona.class" width=500 height=500>
+</applet>
+*/
