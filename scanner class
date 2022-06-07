@@ -1,0 +1,26 @@
+//read text file from keyboard
+import java.io.*;
+import java.util.Scanner;
+class textfile
+{
+ public static void main(String args[]) throws Exception
+  {
+   //reading file name from user
+    Scanner p =new Scanner(System.in);
+    System.out.println("which sequence file do you want to display");
+    String name=p.nextLine();
+   
+  //passing file to scanner class for object creation and later the object will help in display of the file content
+    File f= new File(name);
+    Scanner s=new Scanner(f);
+    System.out.println("the sequence in text file is");
+ 
+  //reading one line after  another
+   
+          while(s.hasNextLine())
+       {
+         System.out.println(s.nextLine());
+       }
+         System.out.println();
+}
+}         
