@@ -1,0 +1,22 @@
+//JDBC - Database connection 
+import java.sql.*; 
+public class connectdatabase 
+{ 
+public static void main(String[] args) 
+{ 
+System.out.println("MySQL Connect"); 
+String url = "jdbc:mysql:///test"; 
+String driver = "com.mysql.jdbc.Driver"; 
+String userName = "root"; 
+String password = "subdic"; 
+try { 
+Class.forName(driver); 
+Connection conn = DriverManager.getConnection (url,userName,password); 
+System.out.println("\nConnected to the database\n"); 
+} 
+catch (Exception e) 
+{ 
+System.out.println(e); 
+} 
+} 
+}
