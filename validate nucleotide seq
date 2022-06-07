@@ -1,0 +1,38 @@
+//to validate dna
+import java.io.*;
+class dnavalidate
+{
+ public static void main(String args[]) throws Exception
+  {
+    
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("enter a sequence");
+    String seq=br.readLine();                                                 
+    char[] dna= seq.toCharArray();
+    int l=dna.length;
+    
+   boolean flag = true;
+  
+  for(int i=0; i<l; i++)
+  {
+    char x=dna[i];
+    if(x =='A' || x == 'a' || x == 'T' || x == 't' || x == 'G' || x == 'g' || x == 'C' || x == 'c')
+    {
+    }
+   else
+   {
+     flag=false;
+     break;
+  }
+}
+   
+  if(flag)
+{
+  System.out.println("valid DNA");
+}
+  else
+{
+  System.out.println("invalid DNA");
+}
+}
+}
