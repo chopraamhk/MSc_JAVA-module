@@ -1,0 +1,25 @@
+//Read and Write Formatted Data
+import java.io.*;
+class Formatted_8
+{
+public static void main(String args[]) throws IOException
+{
+try
+{
+FileOutputStream fos=new FileOutputStream("organism.txt");
+DataOutputStream dos=new DataOutputStream(fos);
+String name="Human";
+String species="Homo sapiens";
+int id=101;
+dos.writeUTF(name);
+dos.writeUTF(species);
+dos.writeInt(id);
+dos.close();
+fos.close();
+}
+catch(FileNotFoundException e)
+{
+System.out.println("File not found");
+}
+}
+}
