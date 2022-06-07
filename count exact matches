@@ -1,0 +1,38 @@
+//sequence matching 
+class seqmatch 
+{ 
+public static void main(String args[]) 
+{ 
+String s1=args[0],s2=args[1]; 
+char[] seq1=s1.toCharArray(); 
+char[] seq2=s2.toCharArray(); 
+int l1=seq1.length,l2=seq2.length,l,pi=0; 
+if(l1<=l2) 
+l=l1; 
+else 
+l=l2; 
+int[] p=new int[1000];//array to store position 
+char[] mc=new char[1000];//array to store matched characters 
+for(int i=0;i<l;i++) 
+{ 
+if(seq1[i]==seq2[i]) 
+{ 
+p[pi]=i+1; 
+mc[pi]=seq1[i]; 
+pi++; 
+} 
+} 
+System.out.println("the matched characters are: "); 
+for(int i=0;i<p.length;i++) 
+System.out.print(""+mc[i]); 
+System.out.println("\n"+"the matched positions are: "); 
+for(int i=0;i<p.length;i++) 
+{ 
+if(p[i]==0) 
+break; 
+else 
+System.out.print(""+p[i]); 
+} 
+System.out.println(""); 
+} 
+}
