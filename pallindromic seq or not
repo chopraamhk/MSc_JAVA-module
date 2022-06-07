@@ -1,0 +1,22 @@
+//to write the palindrome of a sequence
+class palindrome 
+{
+ public static void main(String args[])
+ {
+  String seq=args[0];
+  String seq1=args[1];
+   
+  for(int i=seq.length() -1; i>=0; i--)
+  {
+   seq1+= seq.charAt(i);
+  }
+  System.out.println("string 1 : " +seq);
+  System.out.println("string 2 : " +seq1);
+ 
+  if (seq.equals(seq1))
+  System.out.println("Palindromic");
+  else 
+  System.out.println("not Palindromic");
+}
+}
+
