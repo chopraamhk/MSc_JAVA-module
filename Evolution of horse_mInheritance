@@ -1,0 +1,182 @@
+//inheritance (evolution of horse)
+class parent
+ { 
+   String hname;
+   String stage;
+   double length;
+   double period;
+   void getparent(String h, String s, double l, double p)
+   {
+     hname=h;
+     stage=s;
+     length=l;
+     period=p;
+    }
+   
+   void adisplay()
+   {
+    System.out.println("name of the horse is " +hname);
+    System.out.println("Stage is " +stage);
+    System.out.println("length of the horse is (in m) " +length);
+    System.out.println("time period is (in million years ago) " +period+"\n");
+    
+   }
+}     
+    
+//child class inheritance (evolution of horse)
+public class child extends parent
+ {
+   String hname;
+   String stage;
+   double length;
+   double period;
+  
+   void getchild(String h, String s, double l, double p)
+   {
+     hname=h;
+     stage=s;
+     length=l;
+     period=p;
+   }
+
+    void bdisplay()
+   {
+    System.out.println("Next horse is " +hname);
+    System.out.println("stage of the horse is " +stage);
+    System.out.println("length of the horse is " +length);
+    System.out.println("period is " +period+"\n");
+   }
+   }
+
+//child class1 inheritance (evolution of horse)
+public class child1 extends child
+ {
+   String hname;
+   String stage;
+   double length;
+   double period;
+  
+   void getchild1(String h, String s, double l, double p)
+   {
+    hname=h;
+    stage=s;
+    length=l;
+    period=p;
+   }
+   
+   void cdisplay()
+   {
+    System.out.println("Next horse is " +hname);
+    System.out.println("stage of the horse is " +stage);
+    System.out.println("length of the horse is " +length);
+    System.out.println("Period is (in-million-years-ago) " +period+"\n");
+   }
+ }
+
+//child class2 inheritance (evolution of horse)
+public class child2 extends child1
+ {
+   String hname;
+   String stage;
+   double length;
+   double period;
+  
+   void getchild2(String h, String s, double l, double p)
+   {
+    hname=h;
+    stage=s;
+    length=l;
+    period=p;
+   }
+   
+   void ddisplay()
+   {
+    System.out.println("Next horse is " +hname);
+    System.out.println("stage of the horse is " +stage);
+    System.out.println("length of the horse is " +length);
+    System.out.println("Period is (in-million-years-ago) " +period+"\n");
+   }
+ }
+
+//child class3 inheritance (evolution of horse)
+public class child3 extends child2
+ {
+   String hname;
+   String stage;
+   double length;
+   double period;
+  
+   void getchild3(String h, String s, double l, double p)
+   {
+    hname=h;
+    stage=s;
+    length=l;
+    period=p;
+   }
+   
+   void edisplay()
+   {
+    System.out.println("Next horse is " +hname);
+    System.out.println("stage of the horse is " +stage);
+    System.out.println("length of the horse is " +length);
+    System.out.println("Period is (in-million-years-ago) " +period+"\n");
+   }
+ }
+
+//main class
+import java.util.*;
+import java.io.*;
+
+class evolution 
+ {
+   public static void main(String args[]) throws Exception
+    {
+     int i=0;
+     String[] hn=new String[5];
+     String[] hs=new String[5];
+     double[] hp=new double[5];
+     double[] hl=new double[5];
+    
+     Scanner S = new Scanner(System.in);
+
+     System.out.println("Enter the name of horses - ");   
+       for(i=0; i<5; i++)
+        {
+          hn[i]=S.nextLine();
+        }
+
+ 
+     System.out.println("Enter the stage in which it was found - ");
+         for(i=0; i<5; i++)
+        {
+          hs[i]=S.nextLine();
+        }
+ 
+  
+     System.out.println("Enter the period (in million years ago) - ");
+         for(i=0; i<5; i++)
+        {
+          hp[i]=S.nextDouble();
+        }
+  
+   
+     System.out.println("Enter the length (in m) - ");
+         for(i=0; i<5; i++) 
+         {
+           hl[i]=S.nextDouble();
+         }
+        
+     child3 evo=new child3();
+     evo.getparent(hn[0],hs[0],hp[0],hl[0]);
+     evo.adisplay();
+     evo.getchild(hn[1],hs[1],hp[1],hl[1]);
+     evo.bdisplay();
+     evo.getchild1(hn[2],hs[2],hp[2],hl[2]);
+     evo.cdisplay();
+     evo.getchild2(hn[3],hs[3],hp[3],hl[3]);
+     evo.ddisplay();
+     evo.getchild3(hn[4],hs[4],hp[4],hl[4]);
+     evo.edisplay();
+
+   }
+} 
