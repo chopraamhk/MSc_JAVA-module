@@ -1,0 +1,39 @@
+//encapsulation
+import java.util.*;                                                                                                                      
+class employee
+{
+  private String ename;
+    private double id;
+   	
+   	   employee(String en,double no)
+ 	     {
+      	 	 ename=en;
+     	 	  id=no;
+             }
+    
+  	 	  String display()
+   	 	   {
+   	 	      return ename;
+  	           }
+    
+   	 	 double ddisplay()
+   	  	{
+  	  	  return id;
+   	        }
+	 
+  
+
+
+   public static void main(String args[])
+    {  
+      Scanner s=new Scanner(System.in);    
+
+       System.out.println("enter the name of employee");
+      String name=s.nextLine();
+      System.out.println("enter the id");
+      double rno=s.nextDouble();
+      employee ob = new employee(name,rno);  
+
+     System.out.println("Name and the id of employee is " +ob.display() +"\n" +"id is"  +ob.ddisplay());
+     }
+}
