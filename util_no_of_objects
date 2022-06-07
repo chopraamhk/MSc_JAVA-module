@@ -1,0 +1,30 @@
+class ginti
+{
+static int noOfObjects = 0;
+{
+noOfObjects += 1;
+}
+public ginti()
+{
+int i=1;
+String a= ("alpha");
+}
+public ginti(int n)
+{
+}
+public ginti(String s,int p)
+{
+String ginti;
+}
+public static void main(String args[])
+{
+ginti t1 = new ginti();
+ginti t2 = new ginti(9994);
+ginti t4= new ginti("Michelle", 7);
+ginti t5= new ginti("Daniel", 8);
+ginti t6= new ginti("Vanessa", 9);
+ginti t7= new ginti("Ryan", 8);
+ginti t8 = new ginti("merahaitohkyahua",7);
+System.out.println(ginti.noOfObjects);
+}
+}
