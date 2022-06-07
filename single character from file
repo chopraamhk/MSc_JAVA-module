@@ -1,0 +1,32 @@
+// Lower case to upper case
+import java.io.*;
+class InputStreamExample
+{
+public static void main (String args[]) throws IOException
+{
+BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
+System.out.println("Enter Filename");
+String fn=br.readLine();
+FileInputStream fis;
+FileOutputStream fos;
+int x;
+try
+{
+fis =new FileInputStream (fn);
+fos = new FileOutputStream("ucase.txt");
+while((x=fis.read())!=-1)
+{
+char xx=(char)x;
+fos.write( (int) xx);
+}
+System.out.println("Case conversion over");
+|
+fis.close();
+fos.close();
+}
+catch(FileNotFoundException e)
+{
+System.out.println(e);
+}
+}
+}
