@@ -1,0 +1,28 @@
+//tabular data presentation
+class tabular
+{
+ public static void main(String args[])
+  {
+   System.out.println("AMINO ACID \t 3 letter code \t 1 letter code \t MOLECULAR WEIGHT");
+   System.out.println("alanine \t\t ala \t\t A \t\t 89.1");
+   System.out.println("arginine \t\t arg \t\t R \t\t 174.2");
+   System.out.println("asparagine \t\t asn \t\t N \t\t 132.1");
+   System.out.println("aspartic acid \t\t asp \t\t D \t\t 133.1");
+   System.out.println("cysteine \t\t cys \t\t C \t\t 121.2");
+   System.out.println("glutamine \t\t gln \t\t Q \t\t 146.2");
+   System.out.println("glutamic acid \t\t glu \t\t E \t\t 147.1");
+   System.out.println("glycine \t\t gly \t\t G \t\t 75.1");
+   System.out.println("histidine \t\t his \t\t H \t\t 155.2");
+   System.out.println("isoleucine \t\t ile \t\t I \t\t 131.2");
+   System.out.println("leucine \t\t leu \t\t L \t\t 131.2");
+   System.out.println("lysine \t\t\t lys \t\t K \t\t 131.2");
+   System.out.println("methionine \t\t met \t\t M \t\t 149.2");
+   System.out.println("phenylalanine \t\t phe \t\t F \t\t 165.2");
+   System.out.println("proline \t\t pro \t\t P \t\t 115.1");
+   System.out.println("serine \t\t\t ser \t\t S \t\t 105.1");
+   System.out.println("threonine \t\t thr \t\t T \t\t 119.1");
+   System.out.println("tryptophan \t\t trp \t\t W \t\t 204.2");
+   System.out.println("tyrosine \t\t tyr \t\t Y \t\t 181.2");
+   System.out.println("valine \t\t\t val \t\t V \t\t 117.1");
+  }
+ }
