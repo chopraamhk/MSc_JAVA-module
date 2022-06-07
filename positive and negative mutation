@@ -1,0 +1,33 @@
+ //calculate pmutations
+class mutations
+ {
+  public static void main(String args[])
+   {
+     String DNA1=args[0];
+     String DNA2=args[1];
+     char[]seq1=DNA1.toCharArray();
+     char[]seq2=DNA2.toCharArray();
+     int l,l1,l2;
+     l1=seq1.length;
+     l2=seq2.length;
+   {
+     if(l1<=l2)
+     {
+       l=l1; }
+     else
+     {
+       l=l2; }
+    }
+  int pcount=0;
+  char x1,x2;
+  for(int i=0;i<l;i++)
+  {
+    x1=seq1[i];
+    x2=seq2[i];
+    
+  if((x1=='A' && x2=='T') || (x1=='T' && x2=='A') || (x1=='G' && x2=='C') || (x1=='C' && x2=='G'))
+   pcount++;
+  }
+ System.out.println("Positive Count is" +pcount);
+}
+}
