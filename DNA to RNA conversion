@@ -1,0 +1,29 @@
+//DNA to RNA conversion
+class conversion
+{
+ public static void main(String args[])
+ {
+  int i;
+  i=0; 
+  String dna=args[0];
+  char[] cdna=dna.toCharArray();
+  for (i=0;i<cdna.length;i++)
+  {
+    if (cdna[i]=='A')
+       cdna[i]='T';
+    if (cdna[i]=='T')
+       cdna[i]='A';
+    if (cdna[i]=='G')
+       cdna[i]='C';
+    if (cdna[i]=='C')
+       cdna[i]='G';
+  }
+   System.out.println("the RNA sequence is : ");
+  for (i=0;i<cdna.length;i++)
+  {
+    System.out.print(cdna[i]);
+  }
+
+ System.out.print("\n");
+}
+}
