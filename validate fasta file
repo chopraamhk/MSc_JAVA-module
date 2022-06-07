@@ -1,0 +1,21 @@
+//to validate FASTA file
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+class FASTA
+{
+public static void main(String args[])
+{
+int i;
+Scanner s = new Scanner(new File("seq.txt"));
+while(s.hasNextline)
+{
+String l = s.nextLine();
+if(l.startsWith(">"))
+i++;
+}
+System.out.println("The sequence is in FASTA format");
+
+System.out.println("The sequence is not in FASTA format");
+}
+}
