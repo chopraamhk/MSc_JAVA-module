@@ -1,0 +1,33 @@
+// Java program to demonstrate user defined exception This program throws an exception whenever balance amount is below Rs 1000
+class MyException extends Exception
+{
+private static int account_number[] = {1001, 1002, 1003, 1004}; //account information
+private static String name[] = {"MEHAK", "CHOPRA", "ABHISHEK", "REETA", "SURESH"};
+private static double bal[] = {10010.00, 12089.00, 5600.0, 900.00, 1100.55};
+MyException(String str)
+{
+super(str);
+}
+public static void main(String[] args)
+{
+try
+{
+System.out.println("account_number" + "\t" + "CUSTOMER" + "\t" + "BALANCE");
+// display the actual account information
+for (int i = 0; i < 5 ; i++)
+{
+System.out.println(account_number[i] + "\t" + name[i] + "\t" + bal[i]);
+if (bal[i] < 1000)
+{
+MyException me = new MyException("Balance is less than 1000");
+throw me;
+}
+}
+}
+catch(MyException e)
+{
+   e.except();
+}
+}
+}
+
