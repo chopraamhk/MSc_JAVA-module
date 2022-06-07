@@ -1,0 +1,64 @@
+//dynamic polymorphism
+class fish
+{
+   void vertebrates()
+   {
+     System.out.println("Class 1 - Fish ");
+     System.out.println("cold-blooded");
+     System.out.println("lay eggs");
+   }
+} 
+class amphibians extends fish
+{  
+   void vertebrates()
+   {
+     System.out.println("Class 2 - Amphibians ");
+     System.out.println("cold-blooded");
+     System.out.println("lay eggs");
+   }
+ } 
+class reptiles extends amphibians
+{
+   void vertebrates()
+   {
+     System.out.println("Class 3- Reptiles ");
+     System.out.println("cold-blooded");
+     System.out.println("lay eggs (not calcified)");
+    }
+}  
+class mammals extends reptiles
+{
+   void vertebrates()
+   {
+     System.out.println("Class 4- Mammals");
+     System.out.println("warm-blooded");
+     System.out.println("doesn't lay eggs");
+    }
+}
+class aves extends mammals
+{   
+   void vertebrates()
+   {
+     System.out.println("Class 5- Aves ");
+     System.out.println("warm-blooded");
+     System.out.println("lay eggs");
+    }
+}
+
+class dynpoly
+{
+  public static void main(String args[])
+  {
+     fish f=new fish();
+     f.vertebrates();
+     fish a=new amphibians();
+     a.vertebrates();
+     fish r=new reptiles();
+     r.vertebrates();
+     fish m=new mammals();
+     m.vertebrates();
+     fish s=new aves();
+     s.vertebrates();
+   }
+ }
+
