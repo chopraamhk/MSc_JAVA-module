@@ -1,0 +1,99 @@
+//abstract class under package ---positive mutations
+package mypack;
+public abstract class pmute
+ {
+   public abstract void seq(String a, String b);
+   
+  }
+ 
+//derived class
+package mypack;
+public class dmute extends pmute
+ {
+   public void seq(String a, String b)
+   {
+    String seq1=a;
+    String seq2=b;
+   int l1;
+   int l2;
+   int l;
+   char[] s1= seq1.toCharArray();
+   char[] s2= seq2.toCharArray();
+   l1=s1.length;
+   l2=s2.length;
+ 
+    if(l1<=l2)
+     l=l1;
+    else
+     l=l2;
+
+  int pcount=0;
+  char x1;
+  char x2;
+   
+   for(int i=0; i<l; i++)
+    {
+      x1=s1[i];
+      x2=s2[i];
+  
+if((x1=='A' && x2=='T') || (x1=='A' && x2=='G') || (x1=='A' && x2=='C') || (x1=='T' && x2=='G') || (x1=='T' && x2=='C') || (x1=='G' && x2=='C'))
+     {
+      pcount++;
+      }
+  }
+  System.out.println( "positive count is" +pcount);
+ }
+}
+
+//exception class mutation package
+package mypack;
+public class emute extends Exception
+{
+  String pep;
+  public emute(String pep)
+  {
+   this.pep=pep;
+   }
+  
+  public String toString()
+  {
+    return pep + "is not a Valid sequence";
+  }
+} 
+
+public class mut 
+{
+    public static void main(String args[])
+{
+   String seq1="ATGCGTC";
+   String seq2="ATGCGTA";
+   int l1;
+   int l2;
+   int l;
+   char[] s1= seq1.toCharArray();
+   char[] s2= seq2.toCharArray();
+   l1=s1.length;
+   l2=s2.length;
+ 
+    if(l1<=l2)
+     l=l1;
+    else
+     l=l2;
+
+  int pcount=0;
+  char x1;
+  char x2;
+   
+   for(int i=0; i<l; i++)
+    {
+      x1=s1[i];
+      x2=s2[i];
+  
+       if((x1=='A' && x2=='T') || (x1=='A' && x2=='G') || (x1=='A' && x2=='C') || (x1=='T' && x2=='G') || (x1=='T' && x2=='C') || (x1=='G' && x2=='C'))
+     {
+      pcount++;
+      }
+  }
+  System.out.println( "positive count is" +pcount);
+ }
+}
