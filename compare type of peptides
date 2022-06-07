@@ -1,0 +1,41 @@
+// Java program to Compare two peptides
+import java.io.*;
+import java.lang;
+import java.lang.*;
+import java.util.*;
+public class peptides
+{
+// This method compares two peptides
+public static int stringCompare(String pep1, String pep2)
+{
+int l1 = pep1.length();
+int l2 = pep2.length();
+int lmin = Math.min(l1, l2);
+for (int i = 0; i < lmin; i++)
+{
+int str1_ch = (int)pep1.charAt(i);
+int str2_ch = (int)pep2.charAt(i);
+if (str1_ch != str2_ch)
+{
+return str1_ch - str2_ch;
+}
+}
+if(pep1 <= 8 && pep2 <= 8)
+{
+System.out.println("both are small peptides");
+}
+else if(pep1 >= 9 && pep2 >= 9)
+System.out.println("both are polypeptides");
+else if (pep1 <= 8 && pep2 >= 9 )
+System.out.println("peptide1 is small peptide2 is polypeptide");
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter sequence1");
+System.out.println("enter sequence2");
+String s=sc.nextLine();
+char[] seq=s.toCharArray();
+int l=seq.length;
+}
+}
