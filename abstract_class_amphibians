@@ -1,0 +1,174 @@
+//abstract class
+public abstract class vertebrates
+{
+    abstract void bloodtype();
+    abstract void skintype();
+    abstract void eggs();
+    abstract void home();   
+  }
+
+//class 2 fish (under vertebrates)
+public class fish extends vertebrates
+{
+   fish()
+   {
+     System.out.println("classification of vertebrates - 1) fish ");
+    }
+   void bloodtype()
+   {
+     System.out.println("bloodtype-cold blooded");
+    }
+   void skintype()
+   {
+    System.out.println("skintype-scales are present");
+    }
+     void eggs()
+   {
+    System.out.println("eggs - they lay eggs");
+    }
+   void home()
+    {
+     System.out.println("home- they live in water");
+ }
+}
+
+//class 3 amphibians (under vertebrates)
+public class amphibians extends vertebrates
+{
+   amphibians()
+   {
+     System.out.println("classification of vertebrates - 2) amphibians ");
+    }
+   void bloodtype()
+   {
+     System.out.println("bloodtype-cold blooded");
+    }
+   void skintype()
+   {
+    System.out.println("skintype-smooth skin is present");
+    }
+     void eggs()
+   {
+    System.out.println("eggs - they lay eggs (not calcified shells)");
+    }
+   void home()
+    {
+     System.out.println("home- they live in water");
+ }
+}
+
+//class 4 reptiles (under vertebrates)
+public class reptiles extends vertebrates
+{
+   reptiles()
+   {
+     System.out.println("classification of vertebrates - 3) reptiles ");
+    }
+   void bloodtype()
+   {
+     System.out.println("bloodtype-cold blooded");
+    }
+   void skintype()
+   {
+    System.out.println("skintype-scales are present");
+    }
+     void eggs()
+   {
+    System.out.println("eggs - they lay eggs");
+    }
+   void home()
+    {
+     System.out.println("home- they live in water as well as on land");
+ }
+}
+
+//class 5 mammals (under vertebrates)
+public class mammals extends vertebrates
+{
+   mammals()
+   {
+     System.out.println("classification of vertebrates - 4) mammals ");
+    }
+   void bloodtype()
+   {
+     System.out.println("bloodtype-warm blooded");
+    }
+   void skintype()
+   {
+    System.out.println("hair or fur are present");
+    }
+     void eggs()
+   {
+    System.out.println("eggs - they DO NOT lay eggs");
+    }
+   void home()
+    {
+     System.out.println("home- they live on land");
+ }
+}
+
+//class 5 birds (under vertebrates)
+public class birds extends vertebrates
+{
+   birds()
+   {
+     System.out.println("classification of vertebrates - 5) birds");
+    }
+   void bloodtype()
+   {
+     System.out.println("bloodtype-warm blooded");
+    }
+   void skintype()
+   {
+    System.out.println("skintype-feathers are present");
+    }
+     void eggs()
+   {
+    System.out.println("eggs - they lay eggs");
+    }
+   void home()
+    {
+     System.out.println("home- they live on land (make nests)");
+ }
+}
+
+class classification
+{
+  public static void main(String args[])
+  {
+    fish f=new fish();
+    f.bloodtype();
+    f.skintype();
+    f.skintype();
+    f.eggs();
+    f.home();
+
+   amphibians a=new amphibians();
+    a.bloodtype();
+    a.skintype();
+    a.skintype();
+    a.eggs();
+    a.home();
+  
+   reptiles r=new reptiles();
+    r.bloodtype();
+    r.skintype();
+    r.skintype();
+    r.eggs();
+    r.home();
+
+   mammals m=new mammals();
+    m.bloodtype();
+    m.skintype();
+    m.skintype();
+    m.eggs();
+    m.home(); 
+
+   birds b=new birds();   
+    b.bloodtype();
+    b.skintype();
+    b.skintype();
+    b.eggs();
+    b.home(); 
+ }
+}  
