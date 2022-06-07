@@ -1,0 +1,37 @@
+//constructor demo example
+import java.util.Scanner;
+class protein
+{
+  String amino_acids;
+  double mw;
+  
+  protein()
+  {
+    amino_acids="aa";
+    mw=171;
+   }
+  
+  protein(String a, int w)
+  {
+  amino_acids='a';
+  mw=w;
+  }
+  
+  void display()
+  {
+   System.out.println("name of amino_acid is =" +a);
+   System.out.println("molecular weight of the protein is " +w);
+  }
+ 
+  public static void main(String agrs[]) throws Exception
+  {
+   Scanner P = new Scanner(System.in);
+   System.out.println("enter an amino acid");
+   String a = P.nextLine();
+   System.out.println("Enter the molecular weight");
+   double w = P.nextDouble();
+   protein ob=new protein(a,w);
+   //ob.protein(data);
+   ob.display();
+   }
+ } 
