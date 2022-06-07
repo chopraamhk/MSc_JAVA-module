@@ -1,0 +1,25 @@
+// StringTokenizer example
+import java.util.*;
+class token
+{
+public static void main(String[]args)
+{
+String str = "string token program ";
+StringTokenizer ab = new StringTokenizer(str);
+int c1 = ab.countTokens();
+System.out.println("---- Now you can browse privately, and other people who use this device won't see your activity------");
+while (ab.hasMoreTokens())
+{
+System.out.println(ab.nextToken());
+}
+System.out.println("---- Make the most of your time at home with tips for recipes, workouts, and more','-----");
+StringTokenizer zp = new StringTokenizer(str, ",");
+int c2 = zp.countTokens();
+while (zp.hasMoreTokens())
+{
+System.out.println(zp.nextToken());
+}
+System.out.println("Number of tokens separated by space "+c1);
+System.out.println("Number of tokens separated by comma "+c2);
+}
+}
