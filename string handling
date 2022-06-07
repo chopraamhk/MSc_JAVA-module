@@ -1,0 +1,17 @@
+//string handling
+import java.util.Scanner;
+class stringhand
+{
+   public static void main(String args[])
+    {
+     Scanner s=new Scanner(System.in);
+     System.out.println("enter the username");
+     String su= s.nextLine();
+     System.out.println("enter the password");
+     String sp=s.nextLine();
+       if(sp.equals("bioinfo"))
+          System.out.println("WELCOME" +su);
+       else
+          System.out.println("GOODBYE");
+  }
+}
